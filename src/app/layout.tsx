@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Nav } from "../components/nav/Nav";
+import { Nav } from "../components/Nav/Nav";
+import { Footer } from "october-site/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +12,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-Hant">
+    <html lang="zh-Hant" className="text-[10px] sm:text-[14px] md:text-[16px]">
       <head>
       </head>
-      <body>
+      <body className="min-w-80 w-full">
         <Nav/>
         <div className={inter.className}>{children}</div>
+        <Footer/>
       </body>
     </html>
   );

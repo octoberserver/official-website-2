@@ -1,6 +1,6 @@
 export enum Pages {
   HOME = "/",
   RULES = "/rules",
-  ANNOUNCEMENTS = " /announcements",
+  ANNOUNCEMENTS = "/announcements",
   DOWNLOADS = "/downloads",
 }
