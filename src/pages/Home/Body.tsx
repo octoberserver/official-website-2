@@ -70,10 +70,10 @@ function Qna() {
 function ImagesButton() {
   return (
     <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1">
-      <button className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
-        {/* <h2 className="text-6xl select-none">圖片收藏</h2> */}
+      <a className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
+        {/* <h2 className="text-6xl select-none">教學影片</h2> */}
         <h2 className="text-6xl select-none">尚未完成</h2>
-      </button>
+      </a>
     </div>
   )
 }
@@ -81,7 +81,7 @@ function ImagesButton() {
 function VideosButton() {
   return (
     <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1">
-      <a href="https://www.youtube.com/@user-mc5ov5py8m/videos" className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
+      <a href="https://www.youtube.com/@user-mc5ov5py8m/videos" target="_blank" className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
         {/* <h2 className="text-6xl select-none">教學影片</h2> */}
         <h2 className="text-6xl select-none">影片</h2>
       </a>
