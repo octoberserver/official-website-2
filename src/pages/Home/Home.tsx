@@ -6,7 +6,6 @@ import bannerBg from "../../../public/home/images/minecraft1.png"
 import playIcon from "../../../public/home/images/icons/Enchanted_Netherite_Pickaxe.gif"
 import { Body } from "./Body";
 import { JoinDiscord } from "october-site/components/JoinDiscord";
-import { Header } from "october-site/components/Header";
 import { useState } from "react";
 
 export default function Home() {
@@ -14,13 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <Header background={`url(${bannerBg.src})`} className="h-[35rem]">
-        <h1 className="page-title px-3 inline text-center text-6xl text-white">歡迎來到十月模組伺服器</h1>
-        <button onClick={() => setModalOpen(true)} className="pt-1 px-4 pb-1.5 flex justify-center text-white text-center items-center bg-[#DF0000] rounded-[1rem] md:rounded-[1.25rem]">
-          <span className="text-center text-3xl">開始遊玩!</span>
-          <Image src={playIcon} className="h-7 w-8 md:h-10 md:w-11 pl-1" alt="附魔鑽石鎬"/>
-        </button>
-      </Header>
+      <Header openModal={() => setModalOpen(true)}/>
       {modalOpen && <HowToJoinModal closeModal={() => setModalOpen(false)}/>}
       <h2 className="hidden"> 生存 | 模組 | 模組伺服器 | 領地 | FTB | 模組包 | Forge | 伺服器 | 1.16.5 | 1.12.2 | 1.7.10 | 冒險 | 科技 | FTB伺服器</h2>
       <div className="p-10">
@@ -29,6 +22,20 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+export function Header({openModal}: {openModal: () => void}) {
+  return (
+    <div className={"h-[35rem] min-h-[25rem] w-ful grid place-content-center bg-cover bg-center"} style={{backgroundImage: `url(${bannerBg.src})`}}>
+      <div className="flex flex-col justify-center items-center select-none gap-9">
+        <h1 className="page-title px-3 inline text-center text-6xl text-white">歡迎來到十月模組伺服器</h1>
+        <button onClick={openModal} className="pt-1 px-4 pb-1.5 flex justify-center text-white text-center items-center bg-[#DF0000] rounded-[1rem] md:rounded-[1.25rem]">
+          <span className="text-center text-3xl">開始遊玩!</span>
+          <Image src={playIcon} className="h-7 w-8 md:h-10 md:w-11 pl-1" alt="附魔鑽石鎬"/>
+        </button>
+      </div>
+    </div>
+  )
 }
 
 function HowToJoinModal({closeModal}: {closeModal: () => void}) {

@@ -1,4 +1,4 @@
-import { Header } from "october-site/components/Header";
+import bannerBg from "../../public/downloads/images/banner.png"
 
 type DownloadsPageData = {
   title: string,
@@ -19,20 +19,28 @@ export function Downloads() {
 
   return (
     <>
-      <Header background="">
-        <h1 className="page-title text-white inline text-center px-3 text-[3.8rem]">
-          下載
-        </h1>
-      </Header>
+      <Header/>
       <div className="grid place-content-center">
         <div className="grid text-center mt-12 mb-24 gap-20 w-[75rem] text-[1.6rem]">
           <div className="grid grid-cols-2 gap-8">
-            <Title data={data} />
+            <Title data={data}/>
             <DownloadSections data={data}/>
           </div>
         </div>
       </div>
     </>
+  )
+}
+
+export function Header() {
+  return (
+    <div className="h-[30rem] w-ful bg-cover bg-center" style={{backgroundImage: `url(${bannerBg.src})`}}>
+      <div className="h-full w-full bg-black bg-opacity-20 grid place-content-center">
+        <h1 className="page-title text-white inline text-center px-3 text-[3.8rem]">
+          下載
+        </h1>
+      </div>
+    </div>
   )
 }
 

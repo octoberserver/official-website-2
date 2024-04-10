@@ -28,9 +28,9 @@ export function Nav() {
         <NavLink pathname={pathname} href={Pages.DOWNLOADS}>
           下載
         </NavLink>
-        <NavLink pathname={pathname} href="/tutorials">
+        <ExternalNavLink href="https://tutorials.octoberserver.net">
           教學
-        </NavLink>
+        </ExternalNavLink>
       </ul>
     </nav>
   )
@@ -51,6 +51,15 @@ function NavLink({children, href, pathname}: {children: string | JSX.Element | J
       <Link className={className} href={href}>
         {children}
       </Link>
+    </li>
+  )
+}
+function ExternalNavLink({children, href}: {children: string | JSX.Element | JSX.Element[], href: string}) {
+  return (
+    <li>
+      <a className="text-white text-[1.4rem] py-[0.3rem] px-[0.6rem] rounded-xl" href={href}>
+        {children}
+      </a>
     </li>
   )
 }
