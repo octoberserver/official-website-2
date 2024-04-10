@@ -7,8 +7,8 @@ export function Rules() {
       <Header background="">
         <h1 className="page-title px-3 inline text-center text-6xl text-white">伺服器規則</h1>
       </Header>
-      <div className="grid place-content-center w-full">
-        <div className="grid place-content-center mt-12 mb-24 gap-20 w-[75rem]">
+      <div className="grid place-content-center w-full p-10">
+        <div className="grid place-content-center mt-12 mb-24 gap-20">
           <div className="flex flex-col justify-center items-center">
             <h2 className="text-5xl m-11">📝 遊玩時請遵守規則</h2>
             <div className="bg-[#2D2D2D] rounded-3xl p-6 flex gap-1 flex-col text-[1.6rem]">

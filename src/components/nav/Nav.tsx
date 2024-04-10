@@ -13,12 +13,7 @@ export function Nav() {
 
   return (
     <nav className="fixed min-w-80 w-full box-border flex justify-between items-center py-1.5 px-5 backdrop-blur-sm z-40">
-      <Link href={Pages.HOME} className="logo flex p-0 m-0 justify-center content-center select-none gap-5">
-          <Logo/>
-          <div className="grid place-content-center">
-            <h2 className="p-0 m-0 text-center text-[1.8rem] text-white select-text">十月模組伺服器</h2>
-          </div>
-      </Link>
+      <Logo/>
       <MobileNav pathname={pathname}/>
       <ul className="hidden md:flex list-none p-0 m-0 justify-center content-center select-none gap-1">
         <NavLink pathname={pathname} href={Pages.HOME}>
