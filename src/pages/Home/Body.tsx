@@ -5,8 +5,8 @@ export function Body() {
     <div className="grid place-content-center">
       <div className="mt-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-20 text-center">
         <InfoText/>
-        <ModalButton text="圖片收藏"/>
-        <ModalButton text="教學影片"/>
+        <ImagesButton/>
+        <VideosButton/>
         <Qna/>
       </div>
     </div>
@@ -67,12 +67,24 @@ function Qna() {
   )
 }
 
-function ModalButton({text}: {text: string}) {
+function ImagesButton() {
   return (
     <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1">
-      <button className="rounded-2xl backdrop-blur-xs_c backdrop-brightness-75 h-full w-full grid place-content-center">
-        <h2 className="text-6xl select-none">{text}</h2>
+      <button className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
+        {/* <h2 className="text-6xl select-none">圖片收藏</h2> */}
+        <h2 className="text-6xl select-none">尚未完成</h2>
       </button>
+    </div>
+  )
+}
+
+function VideosButton() {
+  return (
+    <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1">
+      <a href="https://www.youtube.com/@user-mc5ov5py8m/videos" className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
+        {/* <h2 className="text-6xl select-none">教學影片</h2> */}
+        <h2 className="text-6xl select-none">影片</h2>
+      </a>
     </div>
   )
 }
