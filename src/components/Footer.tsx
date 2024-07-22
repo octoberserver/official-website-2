@@ -15,7 +15,7 @@ export function Footer() {
         <a href="https://www.facebook.com/profile.php?id=100064883016723" target="_blank">
             <img src="common/images/icons/footer/facebook.png" className="h-[3.8rem] w-[3.8rem]"/>
         </a>
-        <a href="" target="_blank">
+        <a href="https://tutorials.octoberserver.net/" target="_blank">
             <img src="common/images/icons/footer/tools.png" className="h-[3rem] w-[3rem]"/>
         </a>
       </div>

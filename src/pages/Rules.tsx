@@ -2,7 +2,7 @@ import { JoinDiscord } from "october-site/components/JoinDiscord";
 
 import bannerBg from "../../public/rules/images/banner.png"
 
-export function Rules() {
+export default function Rules() {
   return (
     <>
       <Header/>
@@ -13,7 +13,7 @@ export function Rules() {
   )
 }
 
-export function Header() {
+function Header() {
   return (
     <div className="h-[30rem] w-full bg-cover bg-center grid place-content-center" style={{backgroundImage: `url(${bannerBg.src})`}}>
       <h1 className="page-title px-3 inline text-center text-6xl text-white">伺服器規則</h1>

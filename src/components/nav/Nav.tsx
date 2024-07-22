@@ -28,9 +28,9 @@ export function Nav() {
         <NavLink pathname={pathname} href={Pages.DOWNLOADS}>
           下載
         </NavLink>
-        <ExternalNavLink href="https://tutorials.octoberserver.net">
+        {/* <ExternalNavLink href="https://tutorials.octsrv.org">
           教學
-        </ExternalNavLink>
+        </ExternalNavLink> */}
       </ul>
     </nav>
   )

@@ -1,6 +1,9 @@
 import "./Body.css"
 
-export function Body() {
+import imagesButtonImage from "../../../public/home/images/2021-04-25_18.14.02.png"
+import videosButtonImage from "../../../public/home/images/2021-04-25_18.15.25.png"
+
+export default function Body() {
   return (
     <div className="grid place-content-center">
       <div className="mt-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-20 text-center">
@@ -69,10 +72,9 @@ function Qna() {
 
 function ImagesButton() {
   return (
-    <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1">
-      <a className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
-        {/* <h2 className="text-6xl select-none">教學影片</h2> */}
-        <h2 className="text-6xl select-none">尚未完成</h2>
+    <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1" style={{backgroundImage: `url("${imagesButtonImage.src}")`}}>
+      <a href="https://discord.gg/jdVKSPehPE" target="_blank" className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center backdrop-blur-sm">
+        <h2 className="text-6xl select-none">圖片收藏</h2>
       </a>
     </div>
   )
@@ -80,9 +82,8 @@ function ImagesButton() {
 
 function VideosButton() {
   return (
-    <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1">
-      <a href="https://www.youtube.com/@user-mc5ov5py8m/videos" target="_blank" className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center">
-        {/* <h2 className="text-6xl select-none">教學影片</h2> */}
+    <div className="rounded-2xl w-full h-56 bg-center bg-cover col-span-1 row-span-1" style={{backgroundImage: `url("${videosButtonImage.src}")`}}>
+      <a href="https://www.youtube.com/@user-mc5ov5py8m/videos" target="_blank" className="rounded-2xl backdrop-brightness-75 h-full w-full grid place-content-center backdrop-blur-sm">
         <h2 className="text-6xl select-none">影片</h2>
       </a>
     </div>

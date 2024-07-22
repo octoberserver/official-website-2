@@ -8,7 +8,7 @@ export function MobileNav({pathname}: {pathname: string}) {
   const [open, setOpen] = useState(false);
   return (
     <div className="block md:hidden">
-      <button onClick={() => setOpen(true)}>SHOW</button>
+      <button onClick={() => setOpen(true)}>選單</button>
       {open &&
         <button className="fixed w-screen h-screen top-0 left-0 grid place-content-center bg-black/50" onClick={() => setOpen(false)}>
           <ul className="flex flex-col items-center bg-[#242424] rounded-xl">
@@ -24,9 +24,9 @@ export function MobileNav({pathname}: {pathname: string}) {
           <MobileNavLink pathname={pathname} href={Pages.DOWNLOADS}>
             下載
           </MobileNavLink>
-          <MobileNavLink pathname={pathname} href="/tutorials">
+          {/* <MobileNavLink pathname={pathname} href="/tutorials">
             教學
-          </MobileNavLink>
+          </MobileNavLink> */}
         </ul>
         </button>
       }

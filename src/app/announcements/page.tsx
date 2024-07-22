@@ -1,3 +1,3 @@
-import { Announcements } from "october-site/pages/Announcements";
+import Announcements from "october-site/pages/Announcements";
 
 export default Announcements;

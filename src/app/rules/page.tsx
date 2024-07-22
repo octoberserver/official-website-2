@@ -1,3 +1,3 @@
-import { Rules } from "october-site/pages/Rules";
+import Rules from "october-site/pages/Rules";
 
 export default Rules;

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import bannerBg from "../../../public/home/images/minecraft1.png"
 import playIcon from "../../../public/home/images/icons/Enchanted_Netherite_Pickaxe.gif"
-import { Body } from "./Body";
+import Body from "./Body";
 import { JoinDiscord } from "october-site/components/JoinDiscord";
 import { useState } from "react";
 
@@ -50,9 +50,9 @@ function HowToJoinModal({closeModal}: {closeModal: () => void}) {
         <h2 className="white select-none text-[2.5rem]">開始遊玩</h2>
         <div className="py-3 px-5 rounded-2xl select-none bg-[#393939]">
           <h3>伺服器位址：</h3>
-          <span className="select-text text-2xl mr-1">octoberserver.net:1000</span>
+          <span className="select-text text-2xl mr-1">mod.otcsrv.org</span>
           <span className="text-[1.6rem]">
-            (<a className="text-indigo-400" href="javascript:navigator.clipboard.writeText('octoberserver.net:1000');">點我複製</a>)
+            (<a className="text-indigo-400" href="javascript:navigator.clipboard.writeText('mod.otcsrv.org');">點我複製</a>)
           </span>
         </div>
         <div className="py-3 px-5 rounded-2xl bg-[#393939]">

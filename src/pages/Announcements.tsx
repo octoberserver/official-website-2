@@ -1,6 +1,6 @@
 import bannerBg from "../../public/announcements/images/banner.png"
 
-export function Announcements() {
+export default function Announcements() {
   return (
     <>
       <Header/>
@@ -9,7 +9,7 @@ export function Announcements() {
   )
 }
 
-export function Header() {
+function Header() {
   return (
     <div className="h-[30rem] w-ful bg-cover bg-center" style={{backgroundImage: `url(${bannerBg.src})`}}>
       <div className="h-full w-full bg-black bg-opacity-5 grid place-content-center">

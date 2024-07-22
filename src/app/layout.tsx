@@ -14,6 +14,8 @@ export default function RootLayout({
   return (
     <html lang="zh-Hant" className="text-[10px] sm:text-[14px] md:text-[16px]">
       <head>
+        <title>十月模組伺服器 (歷史悠久的 Minecraft 模組伺服器)</title>
+        <link rel="icon" href="/favicon.ico" sizes="any"/>
       </head>
       <body className="min-w-80 w-full">
         <Nav/>

@@ -15,7 +15,7 @@ type DownloadsPageData = {
   traditionalDownload: DownloadSectionData,
 }
 
-export function Downloads() {
+export default function Downloads() {
   const data: DownloadsPageData = {
     title: "匠造之傳 (The Legend of Tinker)",
     link: "https://www.mcmod.cn/modpack/684.html",
@@ -35,6 +35,14 @@ export function Downloads() {
   return (
     <>
       <Header/>
+      <div className="top-0 left-0 fixed z-30 h-screen w-screen grid place-content-center text-center backdrop-blur-[2px] backdrop-brightness-75">
+        <div className="bg-[#2D2D2D] rounded-3xl p-10 flex gap-3 flex-col">
+          <h1 className="text-5xl">聯動系統<span className="text-red-600">尚未完成</span></h1>
+          <h2 className="text-4xl">
+            請以<a href="https://discord.gg/gCuUgGkdHF" className="text-indigo-500 underline">Discord</a>為準
+          </h2>
+        </div>
+      </div>
       <div className="grid place-content-center">
         <div className="grid text-center mt-12 mb-24 gap-20 w-[75rem] text-[1.6rem]">
           <div className="grid grid-cols-2 gap-8">
@@ -47,7 +55,7 @@ export function Downloads() {
   )
 }
 
-export function Header() {
+function Header() {
   return (
     <div className="h-[30rem] w-ful bg-cover bg-center" style={{backgroundImage: `url(${bannerBg.src})`}}>
       <div className="h-full w-full bg-black bg-opacity-20 grid place-content-center">
