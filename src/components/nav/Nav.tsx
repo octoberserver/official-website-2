@@ -2,9 +2,9 @@
 
 import Link from "next/link"
 import { Pages } from "october-site/util/types"
-import { Logo } from "./Logo"
+import { Logo } from "october-site/components/Nav/Logo"
 import "./Nav.css"
-import { MobileNav } from "./MobileNav"
+import { MobileNav } from "october-site/components/Nav/MobileNav"
 import { usePathname } from "next/navigation"
 
 export function Nav() {
@@ -28,9 +28,9 @@ export function Nav() {
         <NavLink pathname={pathname} href={Pages.DOWNLOADS}>
           下載
         </NavLink>
-        {/* <ExternalNavLink href="https://tutorials.octsrv.org">
+        <ExternalNavLink href="https://tutorials.octsrv.org">
           教學
-        </ExternalNavLink> */}
+        </ExternalNavLink>
       </ul>
     </nav>
   )

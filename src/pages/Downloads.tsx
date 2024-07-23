@@ -44,8 +44,8 @@ export default function Downloads() {
         </div>
       </div>
       <div className="grid place-content-center">
-        <div className="grid text-center mt-12 mb-24 gap-20 w-[75rem] text-[1.6rem]">
-          <div className="grid grid-cols-2 gap-8">
+        <div className="grid text-center mt-12 mb-24 mx-10 gap-20 max-w-[75rem] text-[1.6rem]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <Title title={data.title} link={data.link}/>
             <DownloadSections data={data}/>
           </div>
@@ -69,7 +69,7 @@ function Header() {
 
 function Title({title, link}: {title: string, link: string}) {
   return (
-    <div className="row-span-1 col-span-2">
+    <div className="row-span-1 col-span-1 lg:col-span-2">
       <h2 className="text-5xl mt-11" id="main-pack-launcher">主服模組包</h2>
       <h3 className="mt-4 text-[1.6rem]">
         目前模組包：
@@ -94,7 +94,7 @@ function DownloadSections({data}: {data: DownloadsPageData}) {
 
 function LauncherDownloadSection({data}: {data: DownloadSectionData}) {
   return (
-    <div className="bg-[#2D2D2D] p-8 rounded-2xl select-none flex flex-col justify-between items-center col-span-2 text-[1.6rem]">
+    <div className="bg-[#2D2D2D] p-8 rounded-2xl select-none flex flex-col justify-between items-center col-span-1 lg:col-span-2 text-[1.6rem]">
       <div className="flex flex-col items-center">
         <h3 className="text-4xl">免安裝啟動器：</h3>
         <p className="mt-4 mb-6">不用安裝，解壓縮後直接打開 &quot;<span className="font-semibold">模組包啟動器.exe</span>&quot; 即可開始遊玩</p>
