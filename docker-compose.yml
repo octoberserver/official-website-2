@@ -1,0 +1,13 @@
+services:
+  official-site-2:
+    container_name: official-site-2
+    image: ghcr.io/octoberserver/official-site-2:latest
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.whoami.rule=Host(`octsrv.org`)"
+      - "traefik.http.routers.whoami.entrypoints=web"
+networks:
+  web:
+    external: true
