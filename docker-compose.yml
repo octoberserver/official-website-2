@@ -6,7 +6,7 @@ services:
       - web
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.official-website-2.rule=Host(`octsrv.org`)"
+      - "traefik.http.routers.official-website-2.rule=Host(`octsrv.org`,`octoberserver.net`)"
       - "traefik.http.routers.official-website-2.entrypoints=web,websecure"
 networks:
   web:
