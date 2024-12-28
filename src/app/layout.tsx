@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Nav } from "october-site/components/quack/Nav";
+import { Nav } from "october-site/components/Nav/Nav";
 import { Footer } from "october-site/components/Footer";
 import favicon from "../../public/favicon.ico"
 
