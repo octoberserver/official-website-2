@@ -1,7 +1,7 @@
 services:
-  official-site-2:
-    container_name: official-site-2
-    image: ghcr.io/octoberserver/official-site-2:latest
+  official-website-2:
+    container_name: official-website-2
+    image: ghcr.io/octoberserver/official-website-2:latest
     networks:
       - web
     labels:
