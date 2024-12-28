@@ -1,5 +1,5 @@
 # Use a Node.js base image
-FROM node:18-alpine as builder
+FROM node:23-alpine as builder
 WORKDIR /app
 
 COPY . .
@@ -7,7 +7,7 @@ RUN npm install
 RUN npm run build
 
 
-FROM node:18-alpine
+FROM node:23-alpine
 LABEL authors="october1234"
 WORKDIR /app
 
