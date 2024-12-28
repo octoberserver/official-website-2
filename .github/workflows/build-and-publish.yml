@@ -24,3 +24,11 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:latest
           file: ./Dockerfile
           context: .
+
+      - name: Deploy to production
+        run: |
+          curl -k -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: ${{ secrets.TUNA_AUTH }}" \
+          -d '{"name":"official-site-2","url":"https://raw.githubusercontent.com/octoberserver/official-website-2/refs/heads/main/docker-compose.yml?token=GHSAT0AAAAAACUMESHG6RHVNUMHCKYCBDEAZ3PHYKQ"}' \
+          https://tuna.octsrv.org/deploy
