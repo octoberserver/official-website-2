@@ -2,9 +2,9 @@
 
 import Link from "next/link"
 import { Pages } from "october-site/util/types"
-import { Logo } from "october-site/components/Nav/Logo"
+import { Logo } from "october-site/components/quack/Logo"
 import "./Nav.css"
-import { MobileNav } from "october-site/components/Nav/MobileNav"
+import { MobileNav } from "october-site/components/quack/MobileNav"
 import { usePathname } from "next/navigation"
 
 export function Nav() {
