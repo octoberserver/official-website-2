@@ -1,4 +1,11 @@
 name: build-and-publish.yml
+
+# Change the following according to project needs
+env:
+  IMAGE_NAME: ghcr.io/${{ github.repository }}:latest
+  COMPOSE_NAME: ${{ github.event.repository.name }}
+  COMPOSE_BRANCH: main
+
 on:
   push:
     branches: [main]
@@ -21,7 +28,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ${{ env.IMAGE_NAME }}
           file: ./Dockerfile
           context: .
 
@@ -30,5 +37,5 @@ jobs:
           curl -k -X POST \
           -H "Content-Type: application/json" \
           -H "Authorization: ${{ secrets.TUNA_AUTH }}" \
-          -d '{"name":"official-website-2","url":"https://raw.githubusercontent.com/octoberserver/official-website-2/refs/heads/main/docker-compose.yml"}' \
+          -d '{"name":"${{ env.COMPOSE_NAME }}","url":"https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/${{ env.COMPOSE_BRANCH }}/docker-compose.yml"}' \
           https://tuna.octsrv.org/deploy
