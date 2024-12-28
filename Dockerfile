@@ -12,6 +12,7 @@ LABEL authors="october1234"
 WORKDIR /app
 
 COPY --from=builder /app/build /app/build
+COPY --from=builder /app/next.config.js ./
 
 EXPOSE 3000
 
