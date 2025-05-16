@@ -1,3 +1,3 @@
-import Downloads from "october-site/pages/Downloads";
+import Downloads from "october-site/components/Downloads";
 
 export default Downloads;
