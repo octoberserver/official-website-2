@@ -1,5 +1,6 @@
 import { Modpack } from "october-site/util/types"
 import bannerBg from "../../public/downloads/images/banner.png"
+import "../app/globals.css";
 
 type DownloadSectionData = {
   enabled: true
@@ -132,6 +133,6 @@ function DownloadButton({text, url}: {text: string, url: string}) {
     )
   else
     return (
-      <button className="mt-1 py-2 px-3 bg-[#646464] select-none text-2xl rounded-[1.2rem]">尚未完成 📦</button>
+      <button className="mt-1 py-2 px-3 bg-[#646464] select-none text-2xl rounded-[1.2rem]">目前無法使用</button>
     )
 }
