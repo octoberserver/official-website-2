@@ -8,6 +8,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.official-website-2.rule=Host(`octsrv.org`) || Host(`octoberserver.net`)"
       - "traefik.http.routers.official-website-2.entrypoints=web,websecure"
+      - "traefik.http.routers.official-website-2.tls.certresolver=letsencrypt"
 networks:
   web:
     external: true
