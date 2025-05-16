@@ -7,6 +7,7 @@ import playIcon from "../../../public/home/images/icons/Enchanted_Netherite_Pick
 import Body from "./Body";
 import { JoinDiscord } from "october-site/components/JoinDiscord";
 import { useState } from "react";
+import BackgroundWrapper from "october-site/components/BackgroundWrapper";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -24,17 +25,31 @@ export default function Home() {
   );
 }
 
+// export function Header({openModal}: {openModal: () => void}) {
+//   return (
+//     <div className={"h-[35rem] min-h-[25rem] w-ful grid place-content-center bg-cover bg-center"} style={{backgroundImage: `url(${bannerBg.src})`}}>
+//       <div className="flex flex-col justify-center items-center select-none gap-9">
+//         <h1 className="page-title px-3 inline text-center text-6xl text-white">歡迎來到十月模組伺服器</h1>
+//         <button onClick={openModal} className="pt-1 px-4 pb-1.5 flex justify-center text-white text-center items-center bg-[#DF0000] rounded-[1rem] md:rounded-[1.25rem]">
+//           <span className="text-center text-3xl">開始遊玩!</span>
+//           <Image src={playIcon} className="h-7 w-8 md:h-10 md:w-11 pl-1" alt="附魔鑽石鎬"/>
+//         </button>
+//       </div>
+//     </div>
+//   )
+// }
+
 export function Header({openModal}: {openModal: () => void}) {
   return (
-    <div className={"h-[35rem] min-h-[25rem] w-ful grid place-content-center bg-cover bg-center"} style={{backgroundImage: `url(${bannerBg.src})`}}>
+    <BackgroundWrapper className={"h-[35rem] min-h-[25rem] w-ful grid place-content-center bg-cover bg-center"} image={bannerBg}>
       <div className="flex flex-col justify-center items-center select-none gap-9">
         <h1 className="page-title px-3 inline text-center text-6xl text-white">歡迎來到十月模組伺服器</h1>
         <button onClick={openModal} className="pt-1 px-4 pb-1.5 flex justify-center text-white text-center items-center bg-[#DF0000] rounded-[1rem] md:rounded-[1.25rem]">
           <span className="text-center text-3xl">開始遊玩!</span>
-          <Image src={playIcon} className="h-7 w-8 md:h-10 md:w-11 pl-1" alt="附魔鑽石鎬"/>
+          <Image src={playIcon} unoptimized className="h-7 w-8 md:h-10 md:w-11 pl-1" alt="附魔鑽石鎬"/>
         </button>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }
 

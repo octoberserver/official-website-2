@@ -1,6 +1,7 @@
 import { Modpack } from "october-site/util/types"
 import bannerBg from "../../public/downloads/images/banner.png"
 import "../app/globals.css";
+import BackgroundWrapper from "october-site/components/BackgroundWrapper";
 
 type DownloadSectionData = {
   enabled: true
@@ -52,13 +53,13 @@ export default function Downloads({data}: {data: Modpack}) {
 
 function Header() {
   return (
-    <div className="h-[30rem] w-ful bg-cover bg-center" style={{backgroundImage: `url(${bannerBg.src})`}}>
+    <BackgroundWrapper className="h-[30rem] w-ful bg-cover bg-center" image={bannerBg}>
       <div className="h-full w-full bg-black bg-opacity-20 grid place-content-center">
         <h1 className="page-title text-white inline text-center px-3 text-[3.8rem]">
           下載
         </h1>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }
 
