@@ -5,6 +5,6 @@ export const dynamic = "force-dynamic"
 
 export default async function DownloadsPage() {
     const res = await fetch("https://api.modpack-manager.octsrv.org/servers/main/modpack")
-    const data: Modpack = await res.json()
+    const data: Modpack | undefined = await res.json()
     return <Downloads data={data} />
 };
