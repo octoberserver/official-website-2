@@ -10,7 +10,7 @@ type DownloadSectionData = {
   enabled: false
 }
 
-export default function Downloads({data}: {data: Modpack}) {
+export default function Downloads({data}: {data?: Modpack}) {
 
   // const data: DownloadsPageData = {
   //   title: "匠造之傳 (The Legend of Tinker)",
@@ -42,8 +42,8 @@ export default function Downloads({data}: {data: Modpack}) {
       <div className="grid place-content-center">
         <div className="grid text-center mt-12 mb-24 mx-10 gap-20 max-w-[75rem] text-[1.6rem]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Title title={data.name} link={data.url}/>
-            <DownloadSections data={data}/>
+            <Title title={data?.name || "無"} link={data?.url || ""}/>
+            {data && <DownloadSections data={data}/>}
           </div>
         </div>
       </div>
